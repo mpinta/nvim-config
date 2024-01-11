@@ -5,8 +5,8 @@
 local map = vim.api.nvim_set_keymap
 
 local opts = {
-	noremap = true,
-	silent = true,
+    noremap = true,
+    silent = true,
 }
 
 -- create shortcut for config file sourcing

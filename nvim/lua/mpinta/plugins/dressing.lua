@@ -5,10 +5,10 @@
 local dressing = require("dressing")
 
 dressing.setup({
-	select = {
-		enabled = true,
-		backend = {
-			"telescope",
-		},
-	},
+    select = {
+        enabled = true,
+        backend = {
+            "telescope",
+        },
+    },
 })
