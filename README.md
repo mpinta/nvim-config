@@ -48,7 +48,6 @@ $ cp -r nvim $XDG_CONFIG_HOME
 Plugins are managed with the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager, which can be opened with the `<Space>lz` keymap. Their definitions can be found in the `nvim/lua/mpinta/lazy.lua` file. When you open Neovim for the first time, the plugins should be installed automatically, but you may also need to manually install some dependencies such as `python`, `node` or `yarn`.
 
 Each plugin can be (re)configured inside the `nvim/lua/mpinta/plugins` directory. For example, configure LSPs, formatters, linters and completion here:
-
 | Source | File |
 |---|---|
 | LSPs | `nvim/lua/mpinta/plugins/mason.lua` |
@@ -60,7 +59,6 @@ Configured LSPs, formatters and linters have to be manually installed using the 
 
 ### Core
 The `nvim/lua/mpinta/core` directory contains basic options, helpers and custom keymaps. Those can also be (re)configured:
-
 | Source | File |
 |---|---|
 | Options | `nvim/lua/mpinta/core/options.lua` |
