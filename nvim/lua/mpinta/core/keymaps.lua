@@ -48,6 +48,12 @@ map("n", "<C-l>", "<Cmd>wincmd l<CR>", opts)
 map("n", "<", "<Cmd>vertical resize +5<CR>", opts)
 map("n", ">", "<Cmd>vertical resize -5<CR>", opts)
 
+-- lsp-zero
+map("n", "sgd", "<Cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "sgi", "<Cmd>vsplit | lua vim.lsp.buf.implementation()<CR>", opts)
+map("n", "sgo", "<Cmd>vsplit | lua vim.lsp.buf.type_definition()<CR>", opts)
+map("n", "sgr", "<Cmd>vsplit | lua vim.lsp.buf.references()<CR>", opts)
+
 -- nvim-telescope
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", opts)
 map("n", "<Leader>fg", "<Cmd>Telescope git_files<CR>", opts)
@@ -80,3 +86,14 @@ map("n", "<Leader>o", "<Cmd>Outln<CR>", opts)
 
 -- lazy
 map("n", "<Leader>lz", "<Cmd>Lazy<CR>", opts)
+
+-- toggle background
+function _G.toggle_background()
+    if vim.o.background == "dark" then
+        vim.opt.background = "light"
+    else
+        vim.opt.background = "dark"
+    end
+end
+
+map("n", "<Leader>ba", "<Cmd>lua toggle_background()<CR>", opts)

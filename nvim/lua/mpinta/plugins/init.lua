@@ -2,6 +2,7 @@
 -- nvim/lua/mpinta/plugins/init.lua
 --
 
+require("mpinta.plugins.catppuccin")
 require("mpinta.plugins.conform")
 require("mpinta.plugins.dressing")
 require("mpinta.plugins.lsp-zero")
@@ -14,6 +15,5 @@ require("mpinta.plugins.nvim-telescope")
 require("mpinta.plugins.nvim-treesitter")
 require("mpinta.plugins.outln")
 require("mpinta.plugins.toggleterm")
-require("mpinta.plugins.tokyonight")
 require("mpinta.plugins.vim-better-whitespace")
 require("mpinta.plugins.vim-current-word")

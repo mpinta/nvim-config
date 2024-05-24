@@ -4,7 +4,7 @@
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
     vim.fn.system({
         "git",
         "clone",
@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- themes
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
 
     -- git
     "tpope/vim-fugitive",
@@ -123,7 +123,7 @@ require("lazy").setup({
         },
     },
 
-    -- linting and formatting
+    -- formatting
     {
         "stevearc/conform.nvim",
         event = {
@@ -131,6 +131,8 @@ require("lazy").setup({
             "BufNewFile",
         },
     },
+
+    -- linting
     {
         "mfussenegger/nvim-lint",
         event = {

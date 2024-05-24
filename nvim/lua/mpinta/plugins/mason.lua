@@ -20,20 +20,46 @@ mason.setup({
 
 mason_lspconfig.setup({
     ensure_installed = {
-        "gopls",    -- gopls
-        "tsserver", -- typescript-language-server
-        "eslint",   -- eslint-lsp
-        "lua_ls",   -- lua-language-server
-        "pylsp",    -- python-lsp-server
-        "bashls",   -- bash-lanugage-server
-        "jsonls",   -- json-lsp
-        "dockerls", -- dockerfile-language-server-nodejs
+        "gopls",                           -- gopls
+        "tsserver",                        -- typescript-language-server
+        "lua_ls",                          -- lua-language-server
+        "pylsp",                           -- python-lsp-server
+        "bashls",                          -- bash-language-server
+        "jsonls",                          -- json-lsp
+        "dockerls",                        -- dockerfile-language-server
+        "docker_compose_language_service", -- docker-compose-language-service
     },
     handlers = {
         lsp_zero.default_setup,
+
+        -- Lua configuration
         lua_ls = function()
             local lua_opts = lsp_zero.nvim_lua_ls()
             lspconfig.lua_ls.setup(lua_opts)
+        end,
+
+        -- Python configuration
+        pylsp = function()
+            local python_opts = {
+                settings = {
+                    pylsp = {
+                        plugins = {
+                            rope        = { enabled = false }, -- completions and renaming
+                            pyflakes    = { enabled = false }, -- linter to detect various errors
+                            mccabe      = { enabled = false }, -- linter for complexity checking
+                            pycodestyle = { enabled = false }, -- linter for style checking
+                            pydocstyle  = { enabled = false }, -- linter for docstring style checking
+                            autopep8    = { enabled = false }, -- code formatting
+                            yapf        = { enabled = false }, -- code formatting
+                            flake8      = { enabled = true },  -- error checking
+                            black       = { enabled = true },  -- code formatting
+                            pylint      = { enabled = false }, -- code linting
+                        },
+                    },
+                },
+            }
+
+            lspconfig.pylsp.setup(python_opts)
         end,
     },
 })

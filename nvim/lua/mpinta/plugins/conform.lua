@@ -9,7 +9,6 @@ conform.setup({
         go = { "gofumpt" },
         javascript = { "prettier" },
         typescript = { "prettier" },
-        python = { "isort" },
     },
     format_on_save = {
         lsp_fallback = true,
