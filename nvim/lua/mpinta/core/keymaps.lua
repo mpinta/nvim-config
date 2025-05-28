@@ -69,9 +69,6 @@ map("n", "<Leader>gs", "<Cmd>Gdiffsplit<CR>", opts)
 -- toggleterm
 map("n", "<Leader><CR>", "<Cmd>ToggleTerm dir=%:h<CR>", opts)
 
--- trouble
-map("n", "<Leader>tr", "<Cmd>Trouble<CR>", opts)
-
 -- markdown-preview
 map("n", "<Leader>md", "<Cmd>MarkdownPreview<CR>", opts)
 
@@ -86,6 +83,15 @@ map("n", "<Leader>o", "<Cmd>Outln<CR>", opts)
 
 -- lazy
 map("n", "<Leader>lz", "<Cmd>Lazy<CR>", opts)
+
+-- zen-mode
+map("n", "<Leader>ze", "<Cmd>ZenMode<CR>", opts)
+
+-- namu
+map("n", "<Leader>na", "<Cmd>Namu symbols<CR>", opts)
+
+-- nvim-tree
+map("n", "<Leader>t", "<Cmd>NvimTreeToggle<CR>", opts)
 
 -- toggle background
 function _G.toggle_background()

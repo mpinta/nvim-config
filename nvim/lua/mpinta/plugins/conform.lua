@@ -7,6 +7,8 @@ local conform = require("conform")
 conform.setup({
     formatters_by_ft = {
         go = { "gofumpt" },
+        python = { "black" },
+        html = { "prettier" },
         javascript = { "prettier" },
         typescript = { "prettier" },
     },

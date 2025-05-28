@@ -1,5 +1,5 @@
 --
--- nvim/lua/mpinta/plugins/telescope.lua
+-- nvim/lua/mpinta/plugins/nvim-telescope.lua
 --
 
 local telescope = require("telescope")
@@ -22,6 +22,9 @@ telescope.setup({
     pickers = {
         find_files = {
             hidden = true,
+            layout_config = {
+                width = 0.95,
+            },
         },
         live_grep = {
             additional_args = function()
@@ -29,6 +32,9 @@ telescope.setup({
                     "--hidden",
                 }
             end,
+            layout_config = {
+                width = 0.95,
+            },
         },
     },
 })

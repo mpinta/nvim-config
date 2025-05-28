@@ -6,6 +6,9 @@ local lint = require("lint")
 
 lint.linters_by_ft = {
     go = { "golangcilint" },
+    python = { "flake8" },
+    typescript = { "eslint_d" },
+    javascript = { "eslint_d" },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", {

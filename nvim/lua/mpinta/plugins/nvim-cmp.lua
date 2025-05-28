@@ -1,5 +1,5 @@
 --
--- nvim/lua/mpinta/plugins/cmp.lua
+-- nvim/lua/mpinta/plugins/nvim-cmp.lua
 --
 
 local cmp = require("cmp")

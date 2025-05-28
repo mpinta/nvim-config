@@ -31,12 +31,7 @@ require("lazy").setup({
     "ntpeters/vim-better-whitespace",
     "akinsho/toggleterm.nvim",
     "stevearc/dressing.nvim",
-    {
-        "folke/trouble.nvim",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-    },
+    "folke/zen-mode.nvim",
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {
@@ -63,17 +58,23 @@ require("lazy").setup({
 
     -- highlighting
     "towolf/vim-helm",
-    "nvim-treesitter/nvim-treesitter-context",
     {
         "nvim-treesitter/nvim-treesitter",
         cmd = "TSUpdate",
     },
 
     -- searching
-    "francoiscabrol/ranger.vim",
+    {
+        "bassamsdata/namu.nvim"
+    },
+    {
+        "francoiscabrol/ranger.vim",
+        dependencies = {
+            "rbgrouleff/bclose.vim",
+        },
+    },
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.5",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "kyazdani42/nvim-web-devicons",
@@ -87,6 +88,12 @@ require("lazy").setup({
         "mpinta/outln.nvim",
         dependencies = {
             "stevearc/dressing.nvim",
+        },
+    },
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
         },
     },
 

@@ -7,7 +7,7 @@ local catppuccin = require("catppuccin")
 catppuccin.setup({
     background = {
         light = "latte",
-        dark = "macchiato",
+        dark = "mocha",
     },
     integrations = {
         cmp = true,
@@ -18,6 +18,13 @@ catppuccin.setup({
     },
     telescope = {
         enabled = true,
+    },
+    styles = {
+        keywords = { "bold" },
+        comments = { "italic" },
+        functions = { "bold" },
+        variables = {},
+        strings = {},
     },
     native_lsp = {
         enabled = true,
@@ -37,6 +44,12 @@ catppuccin.setup({
             background = true,
         },
     },
+    dim_inactive = {
+        enabled = true,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    show_end_of_buffer = true,
 })
 
 -- set catppuccin colorscheme

@@ -1,5 +1,5 @@
 --
--- nvim/lua/mpinta/plugins/treesitter.lua
+-- nvim/lua/mpinta/plugins/nvim-treesitter.lua
 --
 
 local treesitter = require("nvim-treesitter.configs")

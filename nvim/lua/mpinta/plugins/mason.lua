@@ -21,11 +21,14 @@ mason.setup({
 mason_lspconfig.setup({
     ensure_installed = {
         "gopls",                           -- gopls
-        "tsserver",                        -- typescript-language-server
-        "lua_ls",                          -- lua-language-server
         "pylsp",                           -- python-lsp-server
+        "html",                            -- html-lsp
+        "ts_ls",                           -- typescript-language-server
+        "tailwindcss",                     -- tailwindcss-language-server
+        "lua_ls",                          -- lua-language-server
         "bashls",                          -- bash-language-server
         "jsonls",                          -- json-lsp
+        "tflint",                          -- tflint
         "dockerls",                        -- dockerfile-language-server
         "docker_compose_language_service", -- docker-compose-language-service
     },
