@@ -25,15 +25,18 @@ nvim
             ├── lsp-zero.lua
             ├── lualine.lua
             ├── mason.lua
+            ├── namu.lua
             ├── neoscroll.lua
             ├── nvim-cmp.lua
             ├── nvim-lint.lua
             ├── nvim-telescope.lua
+            ├── nvim-tree.lua
             ├── nvim-treesitter.lua
             ├── outln.lua
             ├── toggleterm.lua
             ├── vim-better-whitespace.lua
-            └── vim-current-word.lua
+            ├── vim-current-word.lua
+            └── zen-mode.lua
 ```
 
 ## Usage
